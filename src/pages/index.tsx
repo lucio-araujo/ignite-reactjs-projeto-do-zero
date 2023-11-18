@@ -14,6 +14,7 @@ import ApiSearchResponse from '@prismicio/client/types/ApiSearchResponse';
 import { getPrismicClient } from '../services/prismic';
 
 import styles from './home.module.scss';
+import { ExitPreviewButton } from '../components/ExitPreviewButton';
 
 interface Post {
   uid?: string;
@@ -98,6 +99,7 @@ export default function Home({ postsPagination }: HomeProps): JSX.Element {
             Carregar mais posts
           </button>
         )}
+        <ExitPreviewButton className={styles.exitPreview} />
       </main>
     </>
   );
